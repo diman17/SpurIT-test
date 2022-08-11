@@ -1,1 +1,190 @@
-/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+* {
+   box-sizing: border-box; 
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;  
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    max-width: 1920px;
+    background-color: #F6F6F6;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.products__title {
+    margin-bottom: 40px;
+
+    font-family: 'Arial', sans-serif;
+    font-size: 48px;
+    line-height: 72px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.products__wrapper {
+    width: 1180px;
+}
+
+.products__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    width: 380px;
+
+    border-radius: 12px;
+    box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+}
+
+.product-card__wrapper {
+    position: relative;
+
+    margin-bottom: 24px;
+}
+
+.product-card__mark-list {
+    position: absolute;
+    top: 16px;
+    left: -8px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+}
+
+.product-card__mark {
+    padding: 0  16px;
+
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #2F2F2F;
+
+    border-radius: 8px;
+}
+
+.product-card__mark--novelty {
+    background-color: #FDCFF3;
+}
+
+.product-card__mark--last {
+    background-color: #FFCF56;
+}
+
+.product-card__image {
+    margin: 0 -24px;
+
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.product-card__title {
+    margin-bottom: 16px;
+
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 36px;
+    color: #2F2F2F;
+    word-wrap: break-word;
+}
+
+.product-card__description {
+    margin-bottom: 24px;
+
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2F2F2F;
+    word-wrap: break-word;
+}
+
+.product-card__btn {
+    margin: auto 0 24px;
+}
+
+.btn {
+    padding: 11px 16px 12px;
+
+    border-radius: 8px;
+}
+
+.btn--add-to-cart {
+    color: #42940F;
+
+    border: 2px solid #42940F;
+    background-color: transparent;
+}
+
+.btn--add-to-cart:hover {
+    color: #FFF;
+
+    background-color: #42940F;
+}
+
+.btn--add-to-cart:active {
+    color: #FFF;
+
+    border: 2px solid #1F5200;
+    background-color: #1F5200;
+}
+
+.btn--over {
+    color: #FFF;
+
+    background-color: #4E4E4E;
+}
+
+.btn__text {
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
