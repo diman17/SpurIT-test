@@ -1,15 +1,9 @@
 const button = document.querySelector('.collapsible__button');
-const buttonTextOnVisibleContent = document.querySelector('.collapsible__action--visible');
-const buttonTextOnHiddenContent = document.querySelector('.collapsible__action--hidden');
+const buttonTextOnVisibleContent = button.querySelector('.collapsible__action--visible');
+const buttonTextOnHiddenContent = button.querySelector('.collapsible__action--hidden');
 const content = document.querySelector('.collapsible__content');
 
-buttonTextOnVisibleContent.hidden = true;
-
-content.setAttribute('style', `
-    transform: translateY(-40px);
-    opacity: 0;
-    visibility: hidden;
-`)
+buttonTextOnHiddenContent.hidden = true;
 
 const contentKeyframeEffects = [
     { transform: 'translateY(-40px)', opacity: '0', visibility: 'hidden' },
@@ -22,21 +16,21 @@ const contentAnimationProperties = {
     duration: 300,
     easing: 'linear',
     iterations: 1,
-    fill: 'forwards'
+    fill: 'forwards',
 };
 
-button.addEventListener('click', ()=>{
-    if(buttonTextOnVisibleContent.hidden) {
-        content.animate(contentKeyframeEffects, contentAnimationProperties)
+button.addEventListener('click', () => {
+    if (buttonTextOnVisibleContent.hidden) {
+        content.animate(contentKeyframeEffects, contentAnimationProperties);
         
         buttonTextOnVisibleContent.hidden = false;
         buttonTextOnHiddenContent.hidden = true;
     } else {
-        content.animate(contentKeyframeEffects.reverse(), contentAnimationProperties)
+        content.animate(contentKeyframeEffects.reverse(), contentAnimationProperties);
 
         buttonTextOnVisibleContent.hidden = true;
         buttonTextOnHiddenContent.hidden = false;
 
-        contentKeyframeEffects.reverse()
+        contentKeyframeEffects.reverse();
     }
 })
